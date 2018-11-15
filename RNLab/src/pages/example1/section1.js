@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   View, StyleSheet, TouchableOpacity, Text,
 } from 'react-native';
-import ChildComponent from './childComponent';
+import ChildComponent1 from './childComponent1';
 
 const styles = StyleSheet.create({
   container: {
@@ -43,7 +43,7 @@ export default class Section1 extends Component {
         <TouchableOpacity onPress={this.changeValue1}>
           <View>
             <Text style={styles.instructions}>第一种方式：使用props单向数据流传值</Text>
-            <ChildComponent value={this.state.value1} />
+            <ChildComponent1 value={this.state.value1} />
           </View>
         </TouchableOpacity>
       </View>

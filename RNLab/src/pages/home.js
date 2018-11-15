@@ -40,6 +40,11 @@ export default class Home extends Component {
     navigation.navigate('Section1');
   }
 
+  skipToExample3 = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Section3');
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -47,7 +52,9 @@ export default class Home extends Component {
           <Text style={styles.section}>父组件向子组件通信</Text>
         </TouchableOpacity>
         <Text style={styles.section}>子组件向夫组件通信</Text>
-        <Text style={styles.section}>跨级组件之间通信</Text>
+        <TouchableOpacity onPress={this.skipToExample3}>
+          <Text style={styles.section}>跨级组件之间通信</Text>
+        </TouchableOpacity>
         <Text style={styles.section}>非嵌套组件间通信</Text>
       </View>
     );

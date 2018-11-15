@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   View, StyleSheet, Text,
 } from 'react-native';
+import GrandChildComponent from './grandChildComponent';
 
 const styles = StyleSheet.create({
   instructions: {
@@ -12,14 +13,11 @@ const styles = StyleSheet.create({
 });
 
 export default class ChildComponent extends Component {
-    static navigationOptions = ({ navigation }) => ({
-      title: '父组件向子组件通信',
-    })
-
-    render() {
-      const { value } = this.props;
-      return (
-        <Text style={styles.instructions}>{value}</Text>
-      );
-    }
+  render() {
+    return (
+      <View>
+        <GrandChildComponent />
+      </View>
+    );
+  }
 }
