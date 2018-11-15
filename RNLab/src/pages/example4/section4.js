@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {
   View, StyleSheet, TouchableOpacity, Text,
 } from 'react-native';
+import ChildComponent1 from './childComponent1';
+import ChildComponent2 from './childComponent2';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,16 +24,12 @@ export default class Section4 extends Component {
       title: '非嵌套组件间通信',
     })
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        value4: 0,
-      };
-    }
-
     render() {
       return (
-        <View style={styles.container} />
+        <View style={styles.container}>
+          <ChildComponent1 />
+          <ChildComponent2 />
+        </View>
       );
     }
 }
