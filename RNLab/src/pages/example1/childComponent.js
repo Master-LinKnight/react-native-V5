@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class ChildComponent1 extends Component {
+export default class ChildComponent extends Component {
   render() {
     const { value } = this.props;
     return (

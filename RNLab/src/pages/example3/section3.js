@@ -3,7 +3,7 @@ import {
   View, StyleSheet, TouchableOpacity, Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import ChildComponent1 from './childComponent';
+import ChildComponent from './childComponent';
 
 const styles = StyleSheet.create({
   container: {
@@ -57,7 +57,7 @@ export default class Section3 extends Component {
         <View style={styles.container}>
           <TouchableOpacity onPress={this.changeValue1}>
             <View>
-              <ChildComponent1 />
+              <ChildComponent />
             </View>
           </TouchableOpacity>
         </View>
