@@ -45,6 +45,11 @@ export default class Home extends Component {
     navigation.navigate('Section3');
   }
 
+  skipToExample4 = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Section4');
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -55,7 +60,9 @@ export default class Home extends Component {
         <TouchableOpacity onPress={this.skipToExample3}>
           <Text style={styles.section}>跨级组件之间通信</Text>
         </TouchableOpacity>
-        <Text style={styles.section}>非嵌套组件间通信</Text>
+        <TouchableOpacity onPress={this.skipToExample4}>
+          <Text style={styles.section}>非嵌套组件间通信</Text>
+        </TouchableOpacity>
       </View>
     );
   }

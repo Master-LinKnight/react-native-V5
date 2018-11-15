@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
-import { Home, Section1, Section3 } from './pages/index';
+import {
+  Home, Section1, Section3, Section4,
+} from './pages/index';
 
 export default class Router extends Component {
   render() {
@@ -15,7 +17,11 @@ export default class Router extends Component {
       },
       Section3: {
         screen: Section3,
-        path: 'pages/example3/section3.js',
+        path: 'pages/example3/section3',
+      },
+      Section4: {
+        screen: Section4,
+        path: 'pages/example4/section4',
       },
     },
     {
