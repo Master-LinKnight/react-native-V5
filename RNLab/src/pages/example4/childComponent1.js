@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   View, StyleSheet, Text,
 } from 'react-native';
-import { event } from '../common/index';
+import { event } from '../../common/index';
 
 const styles = StyleSheet.create({
   instructions: {
