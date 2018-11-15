@@ -15,7 +15,7 @@ export default class ChildComponent extends Component {
   render() {
     const { value } = this.props;
     return (
-      <Text style={styles.instructions}>{value}</Text>
+      <Text style={styles.instructions}>{`子组件变化${value}`}</Text>
     );
   }
 }
