@@ -20,8 +20,7 @@ export default class ChildComponent2 extends Component {
     };
   }
 
-  render() {
-    const cb = (msg) => {
+    callBack = (msg) => {
       // 触发自定义事件
       event.emit('callMe', msg);
       this.setState({
@@ -29,10 +28,11 @@ export default class ChildComponent2 extends Component {
       });
     };
 
-    return (
-      <TouchableOpacity onPress={() => cb(this.state.value4)}>
-        <Text style={styles.instructions}>点击非嵌套子组件2</Text>
-      </TouchableOpacity>
-    );
-  }
+    render() {
+      return (
+        <TouchableOpacity onPress={() => this.callBack(this.state.value4)}>
+          <Text style={styles.instructions}>点击非嵌套子组件2</Text>
+        </TouchableOpacity>
+      );
+    }
 }
