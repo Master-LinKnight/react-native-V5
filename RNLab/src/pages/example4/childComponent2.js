@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   View, StyleSheet, Text, TouchableOpacity,
 } from 'react-native';
-import { event } from '../../common/index';
+import { emitter } from '../../common/index';
 
 const styles = StyleSheet.create({
   instructions: {
@@ -22,7 +22,7 @@ export default class ChildComponent2 extends Component {
 
     callBack = (msg) => {
       // 触发自定义事件
-      event.emit('callMe', msg);
+      emitter.emit('callMe', msg);
       this.setState({
         value4: this.state.value4 + 1,
       });

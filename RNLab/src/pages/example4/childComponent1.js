@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   View, StyleSheet, Text,
 } from 'react-native';
-import { event } from '../../common/index';
+import { emitter } from '../../common/index';
 
 const styles = StyleSheet.create({
   instructions: {
@@ -29,11 +29,11 @@ export default class ChildComponent1 extends Component {
 
   // 组件销毁前移除事件监听
   componentWillUnmount() {
-    event.removeListener('fun', this.eventEmitter);
+    emitter.removeListener('fun', this.eventEmitter);
   }
 
     eventEmitter = () => {
-      event.addListener('callMe', (msg) => {
+      emitter.addListener('callMe', (msg) => {
         this.setState({
           msg,
         });

@@ -1,5 +1,5 @@
-import event from './event';
+import emitter from './emitter';
 
 export {
-  event,
+  emitter,
 };
